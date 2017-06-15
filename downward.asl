@@ -3,10 +3,15 @@ state("Downward", "v0.46a private")
     int loading : "Downward.exe", 0x051297D8, 0x7d0, 0x178, 0x820;
     int questState : "Downward.exe", 0x051297D8, 0x7d0, 0x178, 0x824;
 }
-
+state("Downward", "v0.79a public")
+{
+    int loading : "Downward.exe", 0x05569720, 0x0, 0x148, 0xAAC;
+    int questState : "Downward.exe", 0x05569720, 0x0, 0x148, 0xAB0;
+}
 init
 {
 	if(modules.First().ModuleMemorySize == 90984448) version = "v0.46a private";
+	else version = "v0.79a public";
 }
 startup
 {
@@ -39,8 +44,8 @@ start
 }
 split
 {
-	if(current.questState == 125125125)
-		return true; //end all if we reach this point -- in case of desync.
+	//if(current.questState == 125125125)
+		//return true; //end all if we reach this point -- in case of desync.
 	if(current.questState != old.questState)
 	{
 		if(settings[current.questState.ToString()])
