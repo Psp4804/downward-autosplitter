@@ -5,8 +5,8 @@ state("Downward", "v0.46a private")
 }
 state("Downward", "v0.80b public")
 {
-    int loading : "Downward.exe", 0x05569720, 0x4d0, 0x90, 0xAB4;
-    int questState : "Downward.exe", 0x05569720, 0x4d0, 0x90, 0xAB8;
+    int loading : "Downward.exe", 0x057AEE38, 0x4d0, 0x90, 0xAB4;
+    int questState : "Downward.exe", 0x057AEE38, 0x4d0, 0x90, 0xAB8;
 }
 init
 {
