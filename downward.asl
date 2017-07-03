@@ -3,15 +3,15 @@ state("Downward", "v0.46a private")
     int loading : "Downward.exe", 0x051297D8, 0x7d0, 0x178, 0x820;
     int questState : "Downward.exe", 0x051297D8, 0x7d0, 0x178, 0x824;
 }
-state("Downward", "v0.79a public")
+state("Downward", "v0.80b public")
 {
-    int loading : "Downward.exe", 0x05569720, 0x0, 0x148, 0xAAC;
-    int questState : "Downward.exe", 0x05569720, 0x0, 0x148, 0xAB0;
+    int loading : "Downward.exe", 0x05569720, 0x4d0, 0x90, 0xAB4;
+    int questState : "Downward.exe", 0x05569720, 0x4d0, 0x90, 0xAB8;
 }
 init
 {
 	if(modules.First().ModuleMemorySize == 90984448) version = "v0.46a private";
-	else version = "v0.79a public";
+	else version = "v0.80b public";
 }
 startup
 {
