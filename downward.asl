@@ -1,11 +1,11 @@
-state("Downward", "v1.00 public")
+state("Downward", "v1.03 public")
 {
     int loading : "Downward.exe", 0x0578B820, 0x58, 0x148, 0xAB4;
-    int questState : "Downward.exe", 0x0578B820, 0x58, 0x148, 0xAB8;
+    int questState : "Downward.exe", 0x0578d820, 0x58, 0x148, 0xAB8;
 }
 init
 {
-	version = "v1.00 public";
+	version = "v1.03 public";
 }
 startup
 {
